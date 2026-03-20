@@ -186,9 +186,9 @@
     <div id="header">
       <ul>
         <b>
-        <li style="color:#CC2F5C;" id="hometxt">HOME</li>
-        <li>ABOUT ME</li>
-        <li class="dropdown">
+        <li id="hometxt">HOME</li>
+        <li id="aboutmetxt" style="color:#CC2F5C;">ABOUT ME</li>
+        <li class="dropdown" id="worktxt">
           WORK
         <ul class="dropdown-menu">
           <li><a href="#">DIGITAL</a></li>
@@ -198,12 +198,12 @@
           <li><a href="#">OTHER</a></li>
         </ul>
         </li>
-        <li>RESUME</li>
+        <li id="resumetxt">RESUME</li>
         </b>
       </ul>
      </div>
     
-    <img src="welcome!.png" id="avatar" width="150px" alt="cartoon drawing of this persons portfolio, saying 'welcome, welcome!'">
+    <img src="aboutMeAva.png" id="avatar" width="150px" alt="cartoon drawing of this persons portfolio, saying 'welcome, welcome!'">
     
     
     
@@ -259,8 +259,8 @@
   const avatarImg = document.getElementById('avatar');
 
   // assign click events
-  document.getElementById('hometxt').addEventListener('click', () => {
-  avatarImg.src = '2clickHome.png';
+  document.getElementById('aboutmetxt').addEventListener('click', () => {
+  avatarImg.src = '2clickAboutMe.png';
   });
     
   document.getElementById('yeg').addEventListener('click', (e) => {

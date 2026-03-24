@@ -42,6 +42,7 @@
         position: relative;
         /*border: 1px solid red;*/
         top: 10px;
+        cursor: pointer;
       }
       
       #header li:hover {
@@ -167,7 +168,8 @@
         position: fixed; 
         bottom: 0px;        
         right: 0px;           
-        z-index: 1000;         
+        z-index: 1000;
+        cursor: pointer;
         
       }
     
@@ -202,7 +204,7 @@
     
     
     
-    <h1 id="yeg">
+    <h1 id="yeg" style="cursor:pointer;">
        YASEMIN EMIRA GUNAL
     </h1>
     
@@ -259,7 +261,13 @@
     if (event.key === "h" || event.key === "H") {
       avatarVisible = 1 - avatarVisible;
       avatarImg.style.opacity = avatarVisible;
-    }
+      
+      if (avatarVisible === 1) {
+        avatarImg.style.pointerEvents = "auto";
+      } else {
+        avatarImg.style.pointerEvents = "none";
+      }
+      }
   });
 
   // assign click events
